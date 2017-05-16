@@ -11,12 +11,32 @@ body {
   background-size: 100% 100%;
 }
 
+#download_buttons {
+  padding-left:200px;
+}
+
+#coverswitch{
+  position: absolute;
+  top: 83px;
+  left: 130px;
+  height: 24px;
+  width: 120px;
+}
+
+#proupgrade{
+  position: absolute;
+  top: 679px;
+  left: 55px;
+  height: 34px;
+  width: 205px;
+}
+
 #background{
   position: absolute;
   top: 120px;
   left: 140px;
   height: 100px;
-  width: 82px;;
+  width: 82px;
 }
 
 #source{
@@ -33,8 +53,26 @@ body {
   left: 336px;
   height: 568px;
   width: 402px;
-  background-color:white;
+  xbackground-color:white;
 }
+
+#btn_save{
+  border:0;
+  position: absolute;
+  background-image: url(../images/save.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 700px;
+  left: 644px;
+  height: 25;
+  width: 95;
+  display:none;
+}
+
+#btn_save:hover{
+  background-image: url(../images/save_act.png);
+}
+
 
 #result img {
   vertical-align: middle;

@@ -3,6 +3,7 @@
     <title>PDF Letterhead Online</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/pdfletterhead.js"></script>
+    <script src="js/download.js"></script>
     <link rel="stylesheet" href="css/pdfletterhead.css">
 
     <!-- Latest compiled and minified CSS -->
@@ -18,22 +19,47 @@
   <body>
 
     <div id="appwindow">
+      <form enctype="multipart/form-data" id="appform" method="post" action="">
 
-      <div class="dropzone" id="background">
-        <div></div>
-        <input type="file" accept="image/png, application/pdf" />
-      </div>
+        <div class="coverswitch" id="coverswitch" onclick="alert('You must download the Mac version to use a cover page.')">
+        </div>
 
-      <div class="dropzone" id="source">
-        <div></div>
-        <input type="file" accept="image/png, application/pdf" />
-      </div>
+        <div class="proupgrade" id="proupgrade" onclick="window.open('https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12');">
+        </div>
 
-      <div id="result">
-        <div></div>
-      </div>
+        <div class="dropzone" id="background">
+          <div></div>
+          <input type="file" name="picture" accept="image/png, application/pdf" />
+        </div>
+
+        <div class="dropzone" id="source">
+          <div></div>
+          <input type="file" name="sourcefile" accept="image/png, application/pdf" />
+        </div>
+
+        <div id="result">
+          <div></div>
+        </div>
+
+        <div id="buttonbar">
+          <a id="btn_save" download="letterheaded.pdf"/>
+        </div>
+
+      </form>
 
 
+    </div>
+
+    <div id="download_buttons">
+      <ul class="list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+        <li>
+          <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download in App Store" class="app-store-hero" id="Lite"></a><br>PDF Letterhead Lite (free)
+        </li>
+        <li>
+          <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download in App Store" class="app-store-hero" id="Pro"></a><br>PDF Letterhead Pro ($ 
+          <meta itemprop="priceCurrency" content="USD"><span itemprop="price">4,99</span>)
+        </li>
+      </ul>
     </div>
 
   </body>

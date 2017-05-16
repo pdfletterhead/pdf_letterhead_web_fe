@@ -1,5 +1,6 @@
 var backgroundSet = false;
 var sourceSet = false;
+var download_link = "";
 
 $(function() {
 
@@ -11,6 +12,19 @@ $(function() {
     $(this).removeClass('hover');
   });
 
+  /*
+  $('#btn_save').on('click', function() {
+    event.preventDefault();
+    if(download_link == '') {
+      console.log('nothing to download');
+    }
+    else{
+      window.open(download_link,'_blank');
+      $('#btn_save').click();
+      //download(download_link,'filename.pdf', 'application/pdf');
+    }
+  });
+ */
 
   $('#source input').on('change', function(e) {
     var file = this.files[0];
@@ -27,7 +41,7 @@ $(function() {
     $('#source img').remove();
 
     setContentImage(file, $('#source div'));
-    processPDF(file);
+    processPDF();
   });
 
 
@@ -46,18 +60,36 @@ $(function() {
     $('#background img').remove();
 
     setContentImage(file, $('#background div'));
-    processPDF(file);
+    processPDF();
   });
-
-
 
 });
 
-function processPDF(file){
+function processPDF(){
   if(backgroundSet && sourceSet){
-    setContentImage(file, $('#result div'));
+
+    var data = new FormData($('#appform')[0]);
+
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:3000/items.json',
+      data: data,
+      processData: false,
+      contentType: false,
+      dataType: "json",
+      success: function(msg){
+
+        $img = $('<img />').attr('src', msg.png).fadeIn();
+        $('#result div').html($img);
+        $('#result').css("background-color","white");
+        download_link = msg.pdf;
+        $('#btn_save').attr('href', download_link);
+        $('#btn_save').fadeIn();
+      }
+    });
   }
 }
+
 function setContentImage(file, destination){
   var reader = new FileReader(file);
 
