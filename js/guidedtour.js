@@ -115,34 +115,41 @@ $(function() {
     var tour = GuidedTour([
       {
       target: '#background',
-      title: $('#tour-step1-title'),
+      title: $('#tour-step1-title').html(),
       placement: 'bottom',
       content: $('#tour-step1-info'),
     },
     {
       target: '#source',
-      title: $('#tour-step2-title'),
+      title: $('#tour-step2-title').html(),
       placement: 'bottom',
       content: $('#tour-step2-info')
     },
     {
       target: '#result',
-      title: $('#tour-step3-title'),
+      title: $('#tour-step3-title').html(),
       placement: 'left',
       content: $('#tour-step3-info')
     },
     {
       target: '#btn_save',
       placement: 'left',
-      title: $('#tour-step4-title'),
+      title: $('#tour-step4-title').html(),
       content: $('#tour-step4-info')
     },
     {
       target: '#downloadmac',
       placement: 'bottom',
-      title: $('#tour-step5-title'),
+      title: $('#tour-step5-title').html(),
       content: $('#tour-step5-info')
     },
+    {
+      target: '#startrondleiding',
+      placement: 'bottom',
+      title: $('#tour-step6-title').html(),
+      content: $('#tour-step6-info')
+    },
+
     ]);
 
     $('#result').css("background-color","white");
