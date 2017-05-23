@@ -1,14 +1,53 @@
 body {
-  background: #d6d6d6 !important;
+  xbackground: #d6d6d6 !important;
+}
+
+.navbar-toggle .icon-bar{
+  background-color:#ba0012;
+}
+
+.icon-small{
+  height: 18px !important;
+margin: 0;
+padding: 0;
+border-radius:0;
+padding:0;
+}
+
+/*#navbar a:hover{
+  background-color:white;
+}
+*/
+.nav .img-thumbnail{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 2px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 0px solid #ddd;
+    border-radius: 0px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.navbar {
+  margin-bottom:-140px;
 }
 
 #appwindow {
   position: relative;
-  width: 820px;
-  height: 822px;
-  background-image: url(../images/pdfletterheadbg.png);
+  width: 750px;
+  height: 752px;
+  background-image: url(../images/pdfletterheadbg750.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.copyright {
+  opacity: .5;
+  font-size: 14px;
+  text-align:center;
+
 }
 
 #download_buttons {
@@ -17,60 +56,62 @@ body {
 
 #coverswitch{
   position: absolute;
-  top: 83px;
-  left: 130px;
+  top: 76px;
+  left: 115px;
   height: 24px;
-  width: 120px;
+  width: 116px;
 }
 
 #proupgrade{
   position: absolute;
-  top: 679px;
-  left: 55px;
-  height: 34px;
-  width: 205px;
+  top: 623px;
+  left: 51px;
+  height: 29px;
+  width: 187px;
 }
 
-#background{
+#background {
   position: absolute;
-  top: 120px;
-  left: 140px;
-  height: 100px;
-  width: 82px;
+  top: 107px;
+  left: 130px;
+  height: 92px;
+  width: 73px;
 }
 
 #source{
   position: absolute;
-  top: 348px;
-  left: 102px;
-  height: 202px;
-  width: 162px;
+  top: 316px;
+  left: 94px;
+  height: 184px;
+  width: 146px;
 }
 
 #result{
   position: absolute;
-  top: 90px;
-  left: 336px;
-  height: 568px;
-  width: 402px;
+  top: 79px;
+  left: 300px;
+  height: 540px;
+  width: 382px;
   xbackground-color:white;
 }
 
 #btn_save{
+  xborder: 1px dotted green;
   border:0;
   position: absolute;
   background-image: url(../images/save.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  top: 700px;
-  left: 644px;
-  height: 25;
-  width: 95;
+  top: 640px;
+  left: 587px;
+  height: 25px;
+  width: 95px;
   display:none;
 }
 
 #btn_save:hover{
   background-image: url(../images/save_act.png);
+  text-decoration:none;
 }
 
 
@@ -81,7 +122,6 @@ body {
 }
 
 .dropzone {
-  xborder: 1px dotted #FFF;
   border-radius: 0px;
   color: white;
   font: bold 24px/200px arial;
@@ -89,8 +129,12 @@ body {
   text-align: center;
 }
 
+.dropzone div {
+  line-height: 0;
+}
 
-.dropzone.hover {
+.dropzone.hover,
+.dropzone:hover {
   background-color:#dfe2e7;
   opacity: 0.3;
 }

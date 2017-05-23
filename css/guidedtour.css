@@ -1,0 +1,15 @@
+body {
+  xmargin: 0;
+  xpadding: 0;
+}
+.well {
+  height: 100vh;
+}
+.popover .mm_actions .btn.pull-right {
+  margin-right: 5px;
+}
+.popover .mm_actions .btn.pull-right:first-child {
+  margin-right: 0;
+}
+
+
