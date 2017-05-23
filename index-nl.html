@@ -1,308 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: PDF Letterhead Online - Gratis PDF Editor
+title2: PDF Letterhead Online
+subtitle2: Voeg achtergrond aan je PDF toe
+help: Hulp nodig? Start de interactieve rondleiding
+next: volgende
+close: sluit
+tourtitle1: Achtergrond
+tourtitle2: PDF-bestand
+tourtitle3: Resultaat
+tourtitle4: Bewaar
+tourtitle5: PDF Letterhead voor macOS
+tourtitle6: Interactieve rondleiding
+tourinfo1: Klik hier om een achtergrond toe te voegen dat achter de PDF-bestand wordt geplaatst. Toegestane bestandstypen zijn jpg, jpeg, jpg, png, pdf, gif.
+tourinfo2: Klik hier om het PDF-bestand toe te voegen.
+tourinfo3: Als beide bestanden zijn toegevoegd wordt hier automatisch een voorbeeld getoond van het nieuwe PDF-bestand.
+tourinfo4: Als beide bestanden zijn toegevoegd kan het nieuwe PDF-bestand met achtergrond bewaard worden.
+tourinfo5: Nog meer gebruikersgemak krijg je met de desktopversie's van PDF Letterhead.
+tourinfo6: Je kunt deze rondleiding altijd opnieuw starten.
+modaltitle: Visuele uitleg PDF Letterhead Online
+modalinfo: PDF Letterhead Online is zeer eenvoudig te gebruiken. Wil je een visuele uitleg hoe het werkt?
+nothanks: Nee bedankt
+starttour: Start de uitleg
+banner2: PDF Letterhead werkt nog prettiger als desktopprogramma. Probeer ze nu.
+readall: Lees alles over PDF Letterhead voor macOS op pdfletterhead.net
+covernotsupported: In PDF Letterhead Online zijn coverpagina\'s niet ondersteund. Download hiervoor de Pro versie
+needtestmaterial: Heb je testmateriaal nodig?
+downloadtestmaterialhtml: xDownload dit <a href="achtergrond.pdf" download>briefpapier-bestand</a>, en dit <a href="tekstdocument.pdf" download>tekstdocument</a> om mee te testen.  <a href="achtergrond.pdf" download><img style="height:50px;" src="images/prevback.png" /></a><a href="tekstdocument.pdf" download><img  style="height:50px;" src="images/prevdoc.png"/></a>
+pdfletterheadformacostitle: PDF Letterhead voor macOS
+pdfletterheadformacosinfo1: Als je PDF Letterhead Online handig vindt, download dan ook de desktopversie van PDF Letterhead. Zo werk je nog efficienter met PDF-bestanden op je eigen computer. Je kunt kiezen uit de gratis Lite versie en de Pro versie.
+pdfletterheadformacosinfo2: is voorzien van nog meer gebruikersgemakken waaronder een handige bibliotheek waarin je al je briefpapierachtergronden kunt opslaan en direct gebruiken.
+pdfletterhead_lite: PDF Letterhead Lite (gratis)
+pdfletterhead_pro: PDF Letterhead Pro ($ <meta itemprop="priceCurrency" content="USD"><span itemprop="price">4,99</span>)
+moreinfo: Meer informatie
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PDF Letterhead Online laat je PDF-bestand eruit zien alsof het op briefpapier is uitgeprint.">
-  <meta name="author" content="MunsterMade.com">
+---
 
-  <title>PDF Letterhead Online - Gratis PDF Editor</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/pdfletterhead.js"></script>
-  <link rel="stylesheet" href="css/pdfletterhead.css">
+<h2>PDF met logo en bedrijfinfo</h2>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-  <script src="js/guidedtour.js"></script>
-  <link rel="stylesheet" href="css/guidedtour.css">
-  <link rel="stylesheet" href="css/pdfviewer.css">
-  <link rel="stylesheet" media="all" href="css/ispinner.css" />
-
-  <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
-
-  <script src="js/pdfviewer.js"></script>
-
-  </head>
-  <body>
-
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <h1 class="xpage-header">PDF Letterhead Online
-            <small>Voeg achtergrond aan je PDF toe</small>
-          </h1>
-          <a id="startrondleiding" class="tourstart" href="#">Hulp nodig? Start de interactieve rondleiding</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img id="imgNavSel" src="images/nl.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavSel">Nederlands</span> <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a id="navDut" href="index-nl.html" class="language"><img id="imgNavDut" src="images/nl.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavFra">Nederlands</span></a></li>
-                <li><a id="navEng" href="index.html" class="language"><img id="imgNavEng" src="images/uk.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavEng">English</span></a></li>
-              </ul>
-            </li>
-          </ul>
-        </div> <!--/.navbar-collapse -->
-      </div>
-    </nav>
-
-    <hr>
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <!-- Portfolio Item Row -->
-      <div class="row">
-
-        <div class="hidden" id="tour-next-title">Volgende</div>
-        <div class="hidden" id="tour-close-title">Sluit</div>
-
-        <div class="hidden" id="tour-step1-title">Achtergrond</div>
-        <div class="hidden" id="tour-step2-title">PDF-bestand</div>
-        <div class="hidden" id="tour-step3-title">Resultaat</div>
-        <div class="hidden" id="tour-step4-title">Bewaar</div>
-        <div class="hidden" id="tour-step5-title">PDF Letterhead voor macOS</div>
-        <div class="hidden" id="tour-step6-title">Interactieve rondleiding</div>
-
-        <div class="hidden" id="tour-step1-info">
-          <p>
-          Klik hier om een achtergrond toe te voegen dat achter de PDF-bestand wordt geplaatst. Toegestane bestandstypen: jpg, jpeg, jpg, png, pdf, gif.
-          </p>
-        </div>
-
-        <div class="hidden" id="tour-step2-info">
-          <p>
-          Klik hier om het PDF-bestand toe te voegen.
-          </p>
-        </div>
-        <div class="hidden" id="tour-step3-info">
-          <p>
-          Als beide bestanden zijn toegevoegd wordt hier automatisch een voorbeeld getoond van het nieuwe PDF-bestand.
-          </p>
-        </div>
-        <div class="hidden" id="tour-step4-info">
-          <p>
-          Als beide bestanden zijn toegevoegd kan het nieuwe PDF-bestand met achtergrond bewaard worden.
-          </p>
-        </div>
-        <div class="hidden" id="tour-step5-info">
-          <p>
-          Nog meer gebruikersgemak krijg je met de desktopversie's van PDF Letterhead.
-          </p>
-        </div>
-        <div class="hidden" id="tour-step6-info">
-          <p>
-          Je kunt deze rondleiding altijd opnieuw starten.
-          </p>
-        </div>
-
-        <div class="modal fade" id="modal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">
-                  Visuele uitleg PDF Letterhead Online
-                </h4>
-              </div>
-              <div class="modal-body">
-                <p>
-                PDF Letterhead Online is zeer eenvoudig te gebruiken. Wil je een visuele uitleg hoe het werkt?
-                </p>
-              </div>
-              <div class="modal-footer">
-                <button class="closetour btn btn-default" data-dismiss="modal">Nee bedankt</button><button autofocus="autofocus" class="btn btn-primary" data-dismiss="modal" id="start">Start de uitleg</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-
-          <div class="jumbotron hidden show-more">
-            <p>PDF Letterhead werkt nog prettiger als desktopprogramma. Probeer ze nu.</p>
-
-            <ul id="downloadmac2" class="text-center list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
-                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br>PDF Letterhead Lite (gratis)
-              </li>
-              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
-                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download in PDF Letteread Pro App Store" class="app-store-hero" id="Pro"></a><br>PDF Letterhead Pro ($ 
-                <meta itemprop="priceCurrency" content="USD"><span itemprop="price">4,99</span>)
-              </li>
-            </ul>
-          </div>
-
-          <h2>PDF met logo en bedrijfinfo</h2>
-
-          <p>Je werkt veel met PDF-bestand, maar je zou willen dat daar ook jouw logo en
-          bedrijfsgegevens op staan. Dit ziet er een stuk professioneler uit, ook uit als
-          je dit bestand per email verstuurt.</p>
-          <p>Dat kan. Gebruik PDF Letterhead Online en
-          je PDF’s zien eruit alsof je ze hebt geprint op je eigen briefpapier.</p>
+<p>Je werkt veel met PDF-bestand, maar je zou willen dat daar ook jouw logo en
+bedrijfsgegevens op staan. Dit ziet er een stuk professioneler uit, ook uit als
+je dit bestand per email verstuurt.</p>
+<p>Dat kan. Gebruik PDF Letterhead Online en
+je PDF’s zien eruit alsof je ze hebt geprint op je eigen briefpapier.</p>
 
 
-          <h3>Hoe werkt PDF Letterhead</h3>
-          <p> PDF Letterhead Online voegt een
-          achtergrond afbeelding toe aan een bestaand PDF-bestand. Vervolgens
-          ziet het nieuwe PDF-bestand er professioneel uit alsof het geprint
-          is op briefpapier.</p>
-          <img src="images/hoe-werkt-pdf-letterhead.png" alt="hoe werkt PDF Letterhead" style="width:320px;height:auto;"/>
+<h3>Hoe werkt PDF Letterhead</h3>
+<p> PDF Letterhead Online voegt een
+achtergrond afbeelding toe aan een bestaand PDF-bestand. Vervolgens
+ziet het nieuwe PDF-bestand er professioneel uit alsof het geprint
+is op briefpapier.</p>
+<img src="images/hoe-werkt-pdf-letterhead.png" alt="hoe werkt PDF Letterhead" style="width:320px;height:auto;"/>
 
-          <p>Gebruikt PDF Letterhead om briefpapier toe te voegen aan offertes, contracten en brieven, handleidingen.</p>
-          <ul>
-            <li>Gratis, snel en gemakkelijk</li>
-            <li>Werkt met PDF's met meer pagina's</li>
-            <li>Geschikt voor PDF met witte achtergrond</li>
-          </ul>
-          <br/>
-          <br/>
-        </div>
-
-        <div class="col-md-8">
-
-          <p class="text-center hidden show-second"><a target="_blank" href="http://pdfletterhead.net">Lees alles over PDF Letterhead voor macOS op pdfletterhead.net</a></p>
-
-          <div id="appwindow" >
-            <div id="hideresulttips"></div>
-            <div id="spinner" class="ispinner ispinner--gray ispinner--large ispinner--animating">
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-              <div class="ispinner__blade"></div>
-            </div>
-
-
-            <div id="newpdf"><a href="#" onclick="location.reload();" >Opnieuw</a></div>
-            <form enctype="multipart/form-data" id="appform" method="post" action="">
-
-              <div class="coverswitch" id="coverswitch" onclick="alert('In PDF Letterhead Online zijn coverpagina\'s niet ondersteund. Download hiervoor de Pro versie')">
-              </div>
-
-              <div class="proupgrade" id="proupgrade" onclick="window.open('https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12');">
-              </div>
-
-              <div class="dropzone" id="background">
-                <div></div>
-                <input type="file" name="picture" accept="image/png, application/pdf" />
-                <canvas id="background-canvas"></canvas>
-              </div>
-
-              <div class="dropzone" id="source">
-                <div></div>
-                <input type="file" name="sourcefile" accept="image/png, application/pdf" />
-                <canvas id="source-canvas"></canvas>
-              </div>
-
-              <div id="result">
-                <div></div>
-              </div>
-
-              <div id="buttonbar">
-                <a id="btn_preview">&nbsp;</a>
-                <a id="btn_save" target="_blank" download="letterheaded.pdf">&nbsp;</a>
-              </div>
-
-            </form>
-          </div>
-
-          <div style="margin-left:100px;margin-top:-60px;">
-            <h3>Heb je testmateriaal nodig?</h3>
-            Download dit <a href="achtergrond.pdf" download>briefpapier-bestand</a>, en
-            dit <a href="tekstdocument.pdf" download>tekstdocument</a> om mee te testen.
-            <a href="achtergrond.pdf" download><img style="height:50px;" src="images/prevback.png" /></a><a href="tekstdocument.pdf" download><img  style="height:50px;" src="images/prevdoc.png"/></a>
-            <br/>
-            <br/>
-          </div>
-
-
-        </div>
-      </div>
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="jumbotron">
-            <h3>PDF Letterhead voor macOS</h3>
-            <p>Als je PDF Letterhead Online handig vindt, download dan ook de
-            desktopversie van PDF Letterhead. Zo werk je nog efficienter met
-            PDF-bestanden op je eigen computer. Je kunt kiezen uit de gratis Lite
-            versie en de Pro versie.</p>
-
-            <p><strong><a target="_blank" href="https://itunes.apple.com/app/id1075794517?l=en&mt=12">PDF Letterhead Pro</a></strong>
-            is voorzien van nog meer gebruikersgemakken waaronder een handige
-            bibliotheek waarin je al je briefpapierachtergronden kunt opslaan en
-            direct gebruiken.</p>
-
-            <ul id="downloadmac" class="text-center list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
-                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="images/iconlite.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br/><br/>
-                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br>PDF Letterhead Lite (gratis)
-              </li>
-              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
-                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="images/iconpro.png" alt="download PDF Letteread Pro in App Store" class="app-store-hero" id="Pro"></a><br/><br/>
-                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download in PDF Letteread Pro App Store" class="app-store-hero" id="Pro"></a><br>PDF Letterhead Pro ($ 
-                <meta itemprop="priceCurrency" content="USD"><span itemprop="price">4,99</span>)
-              </li>
-            </ul>
-
-            <h3>Meer informatie</h3>
-            <p><strong><a target="_blank" href="http://pdfletterhead.net">Lees alles over PDF Letterhead voor macOS op pdfletterhead.net</a></strong>
-
-          </div>
-
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- Footer -->
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p class="copyright">Copyright &copy;  2017 <a href="http://munstermade.com">MunsterMade</a></p>
-          </div>
-        </div>
-        <!-- /.row -->
-      </footer>
-
-    </div>
-    <!-- /.container -->
-    <!--
-
-      Go to www.addthis.com/dashboard to customize your tools -->
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-591ee34e7208474e"></script>
-      <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-98113759-4', 'auto');
-ga('send', 'pageview');
-
-      </script>
-  </body>
-</html>
+<p>Gebruikt PDF Letterhead om briefpapier toe te voegen aan offertes, contracten en brieven, handleidingen.</p>
+<ul>
+  <li>Gratis, snel en gemakkelijk</li>
+  <li>Werkt met PDF's met meer pagina's</li>
+  <li>Geschikt voor PDF met witte achtergrond</li>
+</ul>
+<br/>
+<br/>

@@ -9,8 +9,7 @@
 - [x] cookie
 - [x] spinner
 - [x] chrome/firefox PDF preview oplossing
-
-- [ ] jekyll
+- [x] jekyll
 
 - [ ] NL
   - [x] test materiaal
@@ -30,7 +29,6 @@
 - [ ] deployment
 - [ ] ie werkt niet?
 - [ ] responsive
-
 
 ## Marketing
 - [ ] Twitter

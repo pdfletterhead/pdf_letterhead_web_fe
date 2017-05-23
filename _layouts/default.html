@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PDF Letterhead Online laat je PDF-bestand eruit zien alsof het op briefpapier is uitgeprint.">
+  <meta name="author" content="MunsterMade.com">
+
+  <title>{{page.title}}</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/pdfletterhead.js"></script>
+  <link rel="stylesheet" href="css/pdfletterhead.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="js/guidedtour.js"></script>
+  <link rel="stylesheet" href="css/guidedtour.css">
+  <link rel="stylesheet" href="css/pdfviewer.css">
+  <link rel="stylesheet" media="all" href="css/ispinner.css" />
+
+  <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+  <script src="js/pdfviewer.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h1>{{page.title2}} <small>{{page.subtitle2}}</small></h1>
+          <a id="startrondleiding" class="tourstart" href="#">{{page.help}}</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img id="imgNavSel" src="images/nl.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavSel">Nederlands</span> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a id="navDut" href="index-nl.html" class="language"><img id="imgNavDut" src="images/nl.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavFra">Nederlands</span></a></li>
+                <li><a id="navEng" href="index.html" class="language"><img id="imgNavEng" src="images/uk.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavEng">English</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <hr>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="hidden" id="tour-next-title">{{page.next}}</div>
+        <div class="hidden" id="tour-close-title">{{page.close}}</div>
+
+        <div class="hidden" id="tour-step1-title">{{page.tourtitle1}}</div>
+        <div class="hidden" id="tour-step2-title">{{page.tourtitle2}}</div>
+        <div class="hidden" id="tour-step3-title">{{page.tourtitle3}}</div>
+        <div class="hidden" id="tour-step4-title">{{page.tourtitle4}}</div>
+        <div class="hidden" id="tour-step5-title">{{page.tourtitle5}}</div>
+        <div class="hidden" id="tour-step6-title">{{page.tourtitle6}}</div>
+
+        <div class="hidden" id="tour-step1-info">
+          <p>
+          {{page.tourinfo1}}
+          </p>
+        </div>
+
+        <div class="hidden" id="tour-step2-info">
+          <p>
+          {{page.tourinfo2}}
+          </p>
+        </div>
+        <div class="hidden" id="tour-step3-info">
+          <p>
+          {{page.tourinfo3}}
+          </p>
+        </div>
+        <div class="hidden" id="tour-step4-info">
+          <p>
+          {{page.tourinfo4}}
+          </p>
+        </div>
+        <div class="hidden" id="tour-step5-info">
+          <p>
+          {{page.tourinfo5}}
+          </p>
+        </div>
+        <div class="hidden" id="tour-step6-info">
+          <p>
+          {{page.tourinfo6}}
+          </p>
+        </div>
+
+        <div class="modal fade" id="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">
+                  {{page.modaltitle}}
+                </h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                {{page.modalinfo}}
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button class="closetour btn btn-default" data-dismiss="modal">{{page.nothanks}}</button><button autofocus="autofocus" class="btn btn-primary" data-dismiss="modal" id="start">{{page.starttour}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+
+          <div class="jumbotron hidden show-more">
+            <p>{{page.banner2}}</p>
+
+            <ul id="downloadmac2" class="text-center list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br>PDF Letterhead Lite (gratis)
+              </li>
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download in PDF Letteread Pro App Store" class="app-store-hero" id="Pro"></a><br>PDF Letterhead Pro ($ 
+                <meta itemprop="priceCurrency" content="USD"><span itemprop="price">4,99</span>)
+              </li>
+            </ul>
+          </div>
+          {{content}}
+        </div>
+
+        <div class="col-md-8">
+
+          <p class="text-center hidden show-second"><a target="_blank" href="http://pdfletterhead.net">{{page.readall}}</a></p>
+
+          <div id="appwindow" >
+            <div id="hideresulttips"></div>
+            <div id="spinner" class="ispinner ispinner--gray ispinner--large ispinner--animating">
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+            </div>
+
+
+            <div id="newpdf"><a href="#" onclick="location.reload();" >Opnieuw</a></div>
+            <form enctype="multipart/form-data" id="appform" method="post" action="">
+
+              <div class="coverswitch" id="coverswitch" onclick="alert('{{page.covernotsupported}}')">
+              </div>
+
+              <div class="proupgrade" id="proupgrade" onclick="window.open('https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12');">
+              </div>
+
+              <div class="dropzone" id="background">
+                <div></div>
+                <input type="file" name="picture" accept="image/png, application/pdf" />
+                <canvas id="background-canvas"></canvas>
+              </div>
+
+              <div class="dropzone" id="source">
+                <div></div>
+                <input type="file" name="sourcefile" accept="image/png, application/pdf" />
+                <canvas id="source-canvas"></canvas>
+              </div>
+
+              <div id="result">
+                <div></div>
+              </div>
+
+              <div id="buttonbar">
+                <a id="btn_preview">&nbsp;</a>
+                <a id="btn_save" target="_blank" download="letterheaded.pdf">&nbsp;</a>
+              </div>
+
+            </form>
+          </div>
+
+          <div style="margin-left:100px;margin-top:-60px;">
+            <h3>{{page.needtestmaterial}}</h3>
+            {{page.downloadtestmaterialhtml}}
+            <br/>
+            <br/>
+          </div>
+
+        </div>
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="jumbotron">
+            <h3>{{page.pdfletterheadformacostitle}}</h3>
+            <p>{{page.pdfletterheadformacosinfo1}}</p>
+
+            <p><strong><a target="_blank" href="https://itunes.apple.com/app/id1075794517?l=en&mt=12">PDF Letterhead Pro</a></strong> {{page.pdfletterheadformacosinfo2}} </p>
+
+            <ul id="downloadmac" class="text-center list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="images/iconlite.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br/><br/>
+                <a href="https://itunes.apple.com/app/id976548033?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download PDF Letterhead Lite in App Store" class="app-store-hero" id="Lite"></a><br>{{page.pdfletterhead_lite}}
+              </li>
+              <li style="padding:0;margin:0 10px 0 10px;text-align:center;">
+                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="images/iconpro.png" alt="download PDF Letteread Pro in App Store" class="app-store-hero" id="Pro"></a><br/><br/>
+                <a href="https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12"><img src="images/download-appstore.png" alt="download in PDF Letteread Pro App Store" class="app-store-hero" id="Pro"></a><br>{{page.pdfletterhead_pro}}
+              </li>
+            </ul>
+            <h3>{{page.moreinfo}}</h3>
+            <p><strong><a target="_blank" href="http://pdfletterhead.net">{{page.readall}}</a></strong>
+
+          </div>
+
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="copyright">Copyright &copy;  2017 <a href="http://munstermade.com">MunsterMade</a></p>
+          </div>
+        </div>
+        <!-- /.row -->
+      </footer>
+
+    </div>
+    <!-- /.container -->
+    <!--
+
+      Go to www.addthis.com/dashboard to customize your tools -->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-591ee34e7208474e"></script>
+      <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-98113759-4', 'auto');
+ga('send', 'pageview');
+
+      </script>
+  </body>
+</html>
