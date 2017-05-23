@@ -90,6 +90,7 @@ function processPDF(){
         download_link = msg.pdf;
         $('#btn_save').attr('href', download_link);
         $('#btn_save').fadeIn();
+        $('#newpdf').fadeIn();
       }
     });
   }

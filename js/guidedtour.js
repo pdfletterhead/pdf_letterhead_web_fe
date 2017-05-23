@@ -88,6 +88,12 @@ $(function() {
       title: $('#tour-step4-title'),
       content: $('#tour-step4-info')
     },
+    {
+      target: '#downloadmac',
+      placement: 'bottom',
+      title: $('#tour-step5-title'),
+      content: $('#tour-step5-info')
+    },
     ]);
 
     $('#result').css("background-color","white");

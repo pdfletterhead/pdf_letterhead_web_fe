@@ -3,8 +3,8 @@
 - [x] css rechtzetten
 - [x] google analytics
 - [x] domeinnaam
-- [ ] uitleg
-- [ ] reset methode
+- [x] uitleg
+- [x] reset methode
 - [ ] spinner
 - [ ] chrome PDF preview oplossing
 

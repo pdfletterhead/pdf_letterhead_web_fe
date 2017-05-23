@@ -14,10 +14,6 @@ border-radius:0;
 padding:0;
 }
 
-/*#navbar a:hover{
-  background-color:white;
-}
-*/
 .nav .img-thumbnail{
     display: inline-block;
     max-width: 100%;
@@ -93,6 +89,19 @@ padding:0;
   height: 540px;
   width: 382px;
   xbackground-color:white;
+}
+
+#newpdf{
+  position: absolute;
+  top: 643px;
+  left: 300px;
+  height: 25px;
+  width: 195px;
+  display:none;
+}
+#newpdf a:visited,
+#newpdf a{
+  color:white;
 }
 
 #btn_save{
