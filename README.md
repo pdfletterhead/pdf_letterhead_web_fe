@@ -5,15 +5,15 @@
 - [x] domeinnaam
 - [x] uitleg
 - [x] reset methode
+
 - [ ] spinner
 - [ ] chrome PDF preview oplossing
+- [ ] jekyll
 
 - [ ] NL
   - [x] test materiaal
   - [x] tekst controleren
   - [ ] SEO
-
-- [ ] jekyll
 
 - [ ] EN
 - [ ] DE

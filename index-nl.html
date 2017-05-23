@@ -23,9 +23,11 @@
 
   <script src="js/guidedtour.js"></script>
   <link rel="stylesheet" href="css/guidedtour.css">
+  <link rel="stylesheet" media="all" href="css/ispinner.css" />
 
   </head>
   <body>
+
 
     <nav class="navbar xnavbar-inverse navbar-fixed-topx">
       <div class="container">
@@ -159,7 +161,7 @@
           achtergrond afbeelding toe aan een bestaand PDF-bestand. Vervolgens
           ziet het nieuwe PDF-bestand er professioneel uit alsof het geprint
           is op briefpapier.</p>
-          <img src="images/hoe-werkt-pdf-letterhead.png" alt="hoe werkt PDF Letterhead" />
+          <img src="images/hoe-werkt-pdf-letterhead.png" alt="hoe werkt PDF Letterhead" style="width:320px;height:auto;"/>
 
           <p>Gebruikt PDF Letterhead om briefpapier toe te voegen aan offertes, contracten en brieven, handleidingen.</p>
           <ul>
@@ -181,6 +183,21 @@
 
 
           <div id="appwindow" >
+            <div id="hideresulttips"></div>
+            <div id="spinner" class="ispinner ispinner--gray ispinner--large ispinner--animating">
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+              <div class="ispinner__blade"></div>
+            </div>
 
 
             <div id="newpdf"><a href="#" onclick="location.reload();" >Opnieuw</a></div>
@@ -250,15 +267,13 @@
           </div>
         </div>
 
-
-
       <hr>
 
       <!-- Footer -->
       <footer>
         <div class="row">
           <div class="col-lg-12">
-            <p class="copyright">Copyright &copy; <a href="http://munstermade.com">MunsterMade 2017</a></p>
+            <p class="copyright">Copyright &copy;  2017 <a href="http://munstermade.com">MunsterMade</a></p>
           </div>
         </div>
         <!-- /.row -->

@@ -73,6 +73,9 @@ $(function() {
 function processPDF(){
   if(backgroundSet && sourceSet){
 
+    $("#hideresulttips").show();
+    $("#spinner").fadeIn();
+
     var data = new FormData($('#appform')[0]);
 
     $.ajax({
@@ -89,6 +92,10 @@ function processPDF(){
         $('#result').css("background-color","white");
         download_link = msg.pdf;
         $('#btn_save').attr('href', download_link);
+
+        $("#hideresulttips").hide();
+        $("#spinner").hide();
+
         $('#btn_save').fadeIn();
         $('#newpdf').fadeIn();
       }

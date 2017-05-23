@@ -176,3 +176,20 @@ padding:0;
   bottom: 0;
   left: 0;
 }
+
+#hideresulttips{
+  position:absolute;
+  top:50px;
+  left:282px;
+  width:410px;
+  height:600px;
+  background-color:#333333;
+  display:none;
+}
+
+#spinner{
+  position:absolute;
+  top:340px;
+  left:480px;
+  display:none;
+}
