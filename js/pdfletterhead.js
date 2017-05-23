@@ -45,7 +45,13 @@ $(function() {
 
     $('#source img').remove();
 
-    setContentImage(file, $('#source div'));
+    if(isSafari) {
+      setContentImage(file, $('#source div'));
+    }
+    else {
+      setMozPDF2(file, 'source-canvas');
+    }
+
     processPDF();
   });
 
@@ -64,7 +70,13 @@ $(function() {
 
     $('#background img').remove();
 
-    setContentImage(file, $('#background div'));
+    if(isSafari) {
+      setContentImage(file, $('#background div'));
+    }
+    else {
+      setMozPDF2(file, 'background-canvas');
+    }
+
     processPDF();
   });
 

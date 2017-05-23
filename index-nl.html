@@ -23,7 +23,12 @@
 
   <script src="js/guidedtour.js"></script>
   <link rel="stylesheet" href="css/guidedtour.css">
+  <link rel="stylesheet" href="css/pdfviewer.css">
   <link rel="stylesheet" media="all" href="css/ispinner.css" />
+
+  <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+
+  <script src="js/pdfviewer.js"></script>
 
   </head>
   <body>
@@ -181,6 +186,8 @@
             <li>Werkt met PDF's met meer pagina's</li>
             <li>Geschikt voor PDF met witte achtergrond</li>
           </ul>
+          <br/>
+          <br/>
         </div>
 
         <div class="col-md-8">
@@ -217,11 +224,13 @@
               <div class="dropzone" id="background">
                 <div></div>
                 <input type="file" name="picture" accept="image/png, application/pdf" />
+                <canvas id="background-canvas"></canvas>
               </div>
 
               <div class="dropzone" id="source">
                 <div></div>
                 <input type="file" name="sourcefile" accept="image/png, application/pdf" />
+                <canvas id="source-canvas"></canvas>
               </div>
 
               <div id="result">
@@ -229,6 +238,7 @@
               </div>
 
               <div id="buttonbar">
+                <a id="btn_preview">&nbsp;</a>
                 <a id="btn_save" target="_blank" download="letterheaded.pdf">&nbsp;</a>
               </div>
 

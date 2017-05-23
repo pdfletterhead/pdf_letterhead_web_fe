@@ -1,0 +1,13 @@
+#background-canvas {
+  xborder:solid 1px green;
+  line-height: 0;
+  height: auto;
+  width: 73px;
+
+}
+#source-canvas {
+  line-height: 0;
+  xborder:solid 1px green;
+  height: auto;
+  width: 146px;
+}

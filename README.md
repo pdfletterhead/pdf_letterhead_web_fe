@@ -1,3 +1,4 @@
+# TODO
 - [x] share buttons
 - [x] taalmenu
 - [x] css rechtzetten
@@ -5,9 +6,10 @@
 - [x] domeinnaam
 - [x] uitleg
 - [x] reset methode
+- [x] cookie
+- [x] spinner
+- [x] chrome/firefox PDF preview oplossing
 
-- [ ] spinner
-- [ ] chrome PDF preview oplossing
 - [ ] jekyll
 
 - [ ] NL
@@ -24,8 +26,7 @@
   - [ ] firefox
   - [ ] IE
 
-- [ ] cookie
-
+- [ ] extra preview viewer pdf.js
 - [ ] deployment
 - [ ] ie werkt niet?
 - [ ] responsive
