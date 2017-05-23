@@ -12,13 +12,21 @@
   - [x] test materiaal
   - [x] tekst controleren
   - [ ] SEO
+
 - [ ] jekyll
 
 - [ ] EN
 - [ ] DE
 
-- [ ] deployment
 - [ ] download knop fix
-- [ ] ie werkt niet
+  - [x] safari
+  - [ ] chrome
+  - [ ] firefox
+  - [ ] IE
+
+- [ ] cookie
+
+- [ ] deployment
+- [ ] ie werkt niet?
 - [ ] responsive
 
