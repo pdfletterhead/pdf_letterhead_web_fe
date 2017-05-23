@@ -8,8 +8,16 @@ $(function() {
       $('html, body').clearQueue().animate({scrollTop: Math.max(scrollTop, 0)}, 'fast');
       return false;
     })
+
     .on('click', '[data-dismiss="popover"]', function () {
       $(this).closest('.popover').data('bs.popover').hide();
+
+      if($(this).hasClass('closetour')){
+
+        $('#btn_save').fadeOut();
+        $('#result').css("background-color","transparent");
+      }
+
       return false;
     });
 
@@ -36,9 +44,9 @@ $(function() {
               var out = content;
               out += '<div class="mm_actions clearfix">';
               if (i + 1 < steps.length) {
-                out += '<button type="button" class="btn btn-primary pull-right" autofocus data-dismiss="popover" data-toggle="popover" data-target="'+steps[i + 1].target+'">Next</button>';
+                out += '<button type="button" class="btn btn-primary pull-right" autofocus data-dismiss="popover" data-toggle="popover" data-target="'+steps[i + 1].target+'">'+$('#tour-next-title').html().trim()+'</button>';
               }
-              out += '<button type="button" class="btn btn-default pull-right" data-dismiss="popover">Close</button>';
+              out += '<button type="button" class="closetour btn btn-default pull-right" data-dismiss="popover">'+$('#tour-close-title').html().trim()+'</button>';
               out += '</div>';
               return out;
             }
@@ -52,27 +60,38 @@ $(function() {
 
   $('#modal').modal();
 
+
+
   $('#modal #start').click(function () {
     var tour = GuidedTour([
       {
       target: '#background',
-      title: 'Achtergrond',
+      title: $('#tour-step1-title'),
       placement: 'bottom',
       content: $('#tour-step1-info'),
     },
     {
       target: '#source',
-      title: 'PDF-bestand',
+      title: $('#tour-step2-title'),
       placement: 'bottom',
       content: $('#tour-step2-info')
     },
     {
       target: '#result',
+      title: $('#tour-step3-title'),
       placement: 'left',
-      title: 'resultaat',
-      content: 'Hier ziet u direct het resultaat'
+      content: $('#tour-step3-info')
+    },
+    {
+      target: '#btn_save',
+      placement: 'left',
+      title: $('#tour-step4-title'),
+      content: $('#tour-step4-info')
     },
     ]);
+
+    $('#result').css("background-color","white");
+    $('#btn_save').fadeIn();
 
     tour.start();
   });

@@ -10,7 +10,6 @@
   <title>PDF Letterhead Online - Gratis PDF Editor</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/pdfletterhead.js"></script>
-  <script src="js/download.js"></script>
   <link rel="stylesheet" href="css/pdfletterhead.css">
 
   <!-- Latest compiled and minified CSS -->
@@ -21,6 +20,9 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="js/guidedtour.js"></script>
+  <link rel="stylesheet" href="css/guidedtour.css">
 
   </head>
   <body>
@@ -54,11 +56,81 @@
 
     <hr>
 
+
+
     <!-- Page Content -->
     <div class="container">
 
       <!-- Portfolio Item Row -->
       <div class="row">
+
+        <div class="hidden" id="tour-next-title">Volgende</div>
+        <div class="hidden" id="tour-close-title">Sluit</div>
+
+        <div class="hidden" id="tour-step1-title">
+          <p>
+          Achtergrond
+          </p>
+        </div>
+
+        <div class="hidden" id="tour-step2-title">
+          <p>
+          PDF-bestand
+          </p>
+        </div>
+        <div class="hidden" id="tour-step3-title">
+          <p>
+          Resultaat
+          </p>
+        </div>
+
+        <div class="hidden" id="tour-step4-title">
+          <p>
+          Bewaar
+          </p>
+        </div>
+
+        <div class="hidden" id="tour-step1-info">
+          <p>
+            Klik hier om een achtergrond toe te voegen dat achter de PDF-bestand wordt geplaatst. Toegestane bestandstypen: jpg, jpeg, jpg, png, pdf, gif.
+          </p>
+        </div>
+        <div class="hidden" id="tour-step2-info">
+          <p>
+            Klik hier om het PDF-bestand toe te voegen.
+          </p>
+        </div>
+        <div class="hidden" id="tour-step3-info">
+          <p>
+            Als beide bestanden zijn toegevoegd wordt hier automatisch een voorbeeld getoond van het nieuwe PDF-bestand.
+          </p>
+        </div>
+        <div class="hidden" id="tour-step4-info">
+          <p>
+            Als beide bestanden zijn toegevoegd kan het nieuwe PDF-bestand met achtergrond bewaard worden.
+          </p>
+        </div>
+
+        <div class="modal fade" id="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">
+                  Visuele uitleg PDF Letterhead Online
+                </h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                PDF Letterhead Online is zeer eenvoudig te gebruiken. Wil je een visuele uitleg hoe het werkt?
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Nee bedankt</button><button autofocus="autofocus" class="btn btn-primary" data-dismiss="modal" id="start">Start de uitleg</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="col-md-4">
 
@@ -70,6 +142,7 @@
           <p>Dat kan. Gebruik PDF Letterhead Online en
           je PDF’s zien eruit alsof je ze hebt geprint op je eigen briefpapier.</p>
 
+
           <h3>Hoe werkt PDF Letterhead</h3>
           <p> PDF Letterhead Online voegt een
           achtergrond afbeelding toe aan een bestaand PDF-bestand. Vervolgens
@@ -77,7 +150,70 @@
           is op briefpapier.</p>
           <img src="images/hoe-werkt-pdf-letterhead.png" alt="hoe werkt PDF Letterhead" />
 
-          <h3>PDF Letterhead voor macOS</h3>
+          <p>Gebruikt PDF Letterhead om briefpapier toe te voegen aan offertes, contracten en brieven, handleidingen.</p>
+          <ul>
+            <li>Gratis, snel en gemakkelijk</li>
+            <li>Werkt met PDF's met meer pagina's</li>
+            <li>Geschikt voor PDF met witte achtergrond</li>
+          </ul>
+
+          <h3>Heb je testmateriaal nodig?</h3>
+          Download dit <a href="achtergrond.pdf" download>briefpapier-bestand</a>, en
+          dit <a href="tekstdocument.pdf" download>tekstdocument</a> om mee te testen.<br/>
+          <a href="achtergrond.pdf" download><img style="height:50px;" src="images/prevback.png" /></a><a href="tekstdocument.pdf" download><img  style="height:50px;" src="images/prevdoc.png"/></a>
+          <br/>
+          <br/>
+
+        </div>
+
+        <div class="col-md-8">
+
+
+          <div id="appwindow" >
+
+
+            <div id="appwindow_title_background"></div>
+            <div id="appwindow_help_background"></div>
+            <div id="appwindow_title_source"></div>
+            <div id="appwindow_help_source"></div>
+            <div id="appwindow_tip1"></div>
+            <div id="appwindow_tip2"></div>
+            <form enctype="multipart/form-data" id="appform" method="post" action="">
+
+              <div class="coverswitch" id="coverswitch" onclick="alert('In PDF Letterhead Online zijn coverpagina\'s niet ondersteund. Download hiervoor de Pro versie')">
+              </div>
+
+              <div class="proupgrade" id="proupgrade" onclick="window.open('https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12');">
+              </div>
+
+              <div class="dropzone" id="background">
+                <div></div>
+                <input type="file" name="picture" accept="image/png, application/pdf" />
+              </div>
+
+              <div class="dropzone" id="source">
+                <div></div>
+                <input type="file" name="sourcefile" accept="image/png, application/pdf" />
+              </div>
+
+              <div id="result">
+                <div></div>
+              </div>
+
+              <div id="buttonbar">
+                <a id="btn_save" target="_blank" download="letterheaded.pdf">&nbsp;</a>
+              </div>
+
+            </form>
+          </div>
+
+         </div>
+      </div>
+      <!-- /.row -->
+        <div class="row">
+          <div class="col-lg-12">
+         <div class="jumbotron">
+           <h3>PDF Letterhead voor macOS</h3>
           <p>Als je PDF Letterhead Online handig vindt, download dan ook de
           desktopversie van PDF Letterhead. Zo werk je nog efficienter met
           PDF-bestanden op je eigen computer. Je kunt kiezen uit de gratis Lite
@@ -87,7 +223,6 @@
           is voorzien van nog meer gebruikersgemakken waaronder een handige
           bibliotheek waarin je al je briefpapierachtergronden kunt opslaan en
           direct gebruiken.</p>
-
 
           <ul class="list-inline intro-social-buttons" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
             <li style="padding:0">
@@ -104,64 +239,12 @@
           <h3>Meer informatie</h3>
           <p><strong><a target="_blank" href="http://pdfletterhead.net">Lees alles over PDF Letterhead voor macOS op pdfletterhead.net</a></strong>
 
-        </div>
-
-        <div class="col-md-8">
-
-          <div class="jumbotron">
-            <h2>Gebruik de online app</h2>
-            <ol>
-              <li>Upload je achtergrondafbeelding door op het kader “background”
-                te klikken of door je afbeelding in het kader te slepen.</li>
-              <li>Doe hetzelfde met je PDF in het kader “Content PDF”.</li>
-              <li>Download het nieuw gemaakte PDF-bestand direct hierna.</li>
-            </ol>
-            Download dit <a href="achtergrond.pdf" download>briefpapier-bestand</a>, en
-            dit <a href="tekstdocument.pdf" download>tekstdocument</a> zonder
-            achtergrond om mee te testen.
           </div>
 
-          <div id="appwindow" >
-
-
-            <div id="appwindow_title_background"></div>
-            <div id="appwindow_help_background"></div>
-            <div id="appwindow_title_source"></div>
-            <div id="appwindow_help_source"></div>
-            <div id="appwindow_tip1"></div>
-            <div id="appwindow_tip2"></div>
-            <form enctype="multipart/form-data" id="appform" method="post" action="">
-
-              <div class="coverswitch" id="coverswitch" onclick="alert('You must download the Mac version to use a cover page.')">
-              </div>
-
-            <div class="proupgrade" id="proupgrade" onclick="window.open('https://itunes.apple.com/app/id1075794517?l=en&amp;mt=12');">
-            </div>
-
-            <div class="dropzone" id="background">
-              <div></div>
-              <input type="file" name="picture" accept="image/png, application/pdf" />
-            </div>
-
-            <div class="dropzone" id="source">
-              <div></div>
-              <input type="file" name="sourcefile" accept="image/png, application/pdf" />
-            </div>
-
-            <div id="result">
-              <div></div>
-            </div>
-
-            <div id="buttonbar">
-              <a id="btn_save" target="_blank" download="letterheaded.pdf">&nbsp;</a>
-            </div>
-
-            </form>
           </div>
-
         </div>
-      </div>
-      <!-- /.row -->
+
+
 
       <hr>
 

@@ -3,13 +3,14 @@
 - [x] css rechtzetten
 - [x] google analytics
 - [x] domeinnaam
+- [ ] uitleg
 - [ ] reset methode
 - [ ] spinner
 - [ ] chrome PDF preview oplossing
 
 - [ ] NL
   - [x] test materiaal
-  - [ ] tekst controleren
+  - [x] tekst controleren
   - [ ] SEO
 - [ ] jekyll
 
