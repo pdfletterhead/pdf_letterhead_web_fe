@@ -47,7 +47,7 @@
         <div id="navbar" class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img id="imgNavSel" src="images/nl.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavSel">Nederlands</span> <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img id="imgNavSel" src="images/{{page.currentlang_code}}.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavSel">{{page.currentlang}}</span> <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a id="navDut" href="index-nl.html" class="language"><img id="imgNavDut" src="images/nl.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavFra">Nederlands</span></a></li>
                 <li><a id="navEng" href="index.html" class="language"><img id="imgNavEng" src="images/uk.gif" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;<span id="lanNavEng">English</span></a></li>
@@ -204,7 +204,7 @@
 
           <div style="margin-left:100px;margin-top:-60px;">
             <h3>{{page.needtestmaterial}}</h3>
-            {{page.downloadtestmaterialhtml}}
+            {{page.downloadtestmaterialhtml}}<a href="achtergrond.pdf" download><img style="height:50px;" src="images/prevback.png" /></a><a href="tekstdocument.pdf" download><img  style="height:50px;" src="images/prevdoc.png"/></a>
             <br/>
             <br/>
           </div>
