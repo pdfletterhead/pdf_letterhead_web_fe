@@ -31,3 +31,8 @@
 - [ ] ie werkt niet?
 - [ ] responsive
 
+
+## Marketing
+- [ ] Twitter
+- [ ] Producthunt
+- [ ] fora
