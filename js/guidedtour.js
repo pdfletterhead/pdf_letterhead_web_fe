@@ -21,19 +21,36 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    var washere = getCookie("washere");
-    if (washere != "") {
-        alert("Welcome again " + washere);
-    } else {
+  var washere = getCookie("washere");
+  if (washere == "first") {
+    returningVisiter(1);
+    setCookie("washere", 'second', 365);
+  } else if (washere == "second"){
+    returningVisiter(2);
+    setCookie("washere", 'more', 365);
+  } else if (washere == "more"){
+    returningVisiter(3);
 
-      $('#modal').modal();
+  } else {
 
-      //first time show TOUR
-      if (washere != "" && washere != null) {
-        setCookie("washere", 'yes', 365);
-      }
-    }
+    $('#modal').modal();
+
+    setCookie("washere", 'first', 365);
+  }
 }
+
+function returningVisiter(visit){
+  if(visit == 1) {
+  }
+  else if (visit == 2){
+    $('.show-second').removeClass('hidden');
+  }
+  else if (visit > 2){
+    $('.show-second').removeClass('hidden');
+    $('.show-more').removeClass('hidden');
+  }
+}
+
 $(function() {
 
   var GuidedTour = function (steps, options) {
@@ -94,10 +111,7 @@ $(function() {
     }
   };
 
-
-
-
-  $('#modal #start').click(function () {
+  $('#modal #start, .tourstart').click(function () {
     var tour = GuidedTour([
       {
       target: '#background',
