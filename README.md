@@ -13,12 +13,15 @@
 - [x] talen in footer
 - [x] quick and dirty feeback
 
-- [ ] deployment aws
-  - [ ] AIM permissions in policies -> syncJekyllSites aangepast
-  - [ ] gitlab-ci.yml toevoegd
-  - [ ] gemfile* toegevoegd
-  - [ ] aws keys in gitlab inegsteld in pipeline settings
+- [x] deployment aws
+  - [x] AIM permissions in policies -> syncJekyllSites aangepast
+  - [x] gitlab-ci.yml toevoegd
+  - [x] gitlab-ci.yml S3 pad aangepast
+  - [x] gemfile* toegevoegd
+  - [x] aws keys in gitlab inegsteld in pipeline settings
   - [ ] getest
+
+- [ ] hernoem repo
 
 - [ ] https
 

@@ -16,4 +16,4 @@ build:
     - chmod 600 ~/.aws/config
     - bundle install
     - jekyll build
-    - /usr/bin/aws s3 sync ./_site s3://liszt.munstermade.com
+    - /usr/bin/aws s3 sync ./_site s3://online.pdfletterhead.net
