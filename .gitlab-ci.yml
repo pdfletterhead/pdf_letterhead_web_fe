@@ -1,0 +1,19 @@
+before_script:
+  - apt-get update
+  - apt-get -y install awscli
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - mkdir ~/.aws
+    - echo "[default]" >> /root/.aws/config
+    - echo "aws_access_key_id = $AWS_ACCESS_KEY_ID" >> /root/.aws/config
+    - echo "aws_secret_access_key = $AWS_SECRET_ACCESS_KEY" >> /root/.aws/config
+    - echo "region = eu-west-1" >> /root/.aws/config
+    - chmod 600 ~/.aws/config
+    - bundle install
+    - jekyll build
+    - /usr/bin/aws s3 sync ./_site s3://liszt.munstermade.com
