@@ -16,8 +16,8 @@
   - [x] tekst controleren
   - [ ] SEO
 
-- [ ] EN
-- [ ] DE
+- [ ] EN, proofreading
+- [ ] DE, translating
 
 - [ ] download knop fix
   - [x] safari
