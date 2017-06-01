@@ -12,20 +12,13 @@
 - [x] jekyll
 - [x] talen in footer
 - [x] quick and dirty feeback
-
 - [x] deployment aws
   - [x] AIM permissions in policies -> syncJekyllSites aangepast
   - [x] gitlab-ci.yml toevoegd
   - [x] gitlab-ci.yml S3 pad aangepast
   - [x] gemfile* toegevoegd
   - [x] aws keys in gitlab inegsteld in pipeline settings
-  - [ ] getest
-
-- [ ] hernoem repo
-
-- [ ] https
-
-- [ ] site checklist
+  - [x] getest
 
 - [ ] google analytics events toevoegen
   - [ ] background
@@ -38,6 +31,7 @@
   - [ ] download lite boven
   - [ ] download pro boven
   - [ ] guided tour
+  - [ ] feedback
 
 - NL Proofreading
   - [x] test materiaal
@@ -76,13 +70,15 @@
 - [ ] ES Traffic Promotion
 - [ ] FR Traffic Promotion
 
-## Eigen PR
+## Eigen PR/SEO/ETC
 - [ ] submit url in google
 - [ ] NL Twitter boost
 - [ ] Twitter bericht
 - [ ] Producthunt
 - [ ] fora
 - [ ] medium
+- [ ] site checklist: https://www.conversionchecklist.org/?ref=producthunt
+- [ ] https
 
 ## Jurisisch
 Terms of service NL/EN...
@@ -90,6 +86,7 @@ Terms of service NL/EN...
 ### Feedback mogelijkheid
 - algemene support form
 - uservoice achtige manier
+
 
 ## Bij meer dan 1000 bezoekers/dag
 ### AdSense
